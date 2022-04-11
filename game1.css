@@ -1,0 +1,42 @@
+*{
+	margin:0 auto;
+	background-color:crimson; 
+}
+h1{
+	position: absolute;
+	top:10vh;
+	left:45%;
+	align-self: center;
+	font-weight: bolder;
+	font-size: 100px;
+	font-family: fantasy;
+	color: coral;
+
+}
+img{
+	position: absolute;
+	top:35vh;
+	left:28%;
+	width:13%;
+	height: 37%;
+}
+.container{
+	position: absolute;
+	top:33vh;
+	left:41%;
+	border:1px solid tomato;
+	border-radius: 20px;
+	border:none;
+	width:430px;
+	height:150px;
+	background-color: transparent;
+	box-shadow: 3px 3px slategrey;
+}
+.container p {
+	text-align:center;
+	margin-top:30px;
+	font-size: 55px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color:blanchedalmond;
+}
+

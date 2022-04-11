@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DIALOGUE</title>
+	<link rel="stylesheet" type="text/css" href="game1.css">
+</head>
+<body>
+	<h1>Dialogue</h1>
+	<img src="danbot.gif">
+	<div class="container">
+		<p id="p1"></p>
+	</div>
+
+
+
+
+
+
+
+
+
+
+	<script>
+		function dialogue(){
+			let infoArray = [];
+			const nameInput = prompt("Hello Buddy, What is your name?");
+			if(nameInput){
+				const nameChange = nameInput.trim().toUpperCase();
+				infoArray.push(nameChange);
+			}else{
+				location.reload();
+			}
+			const Inform = confirm("Can I know you more?");
+			
+			if(Inform){
+				const age = prompt("Your age please?");
+				if(age === isNaN){
+					alert("wrong input!");
+				}else{
+					infoArray.push(age);
+				}
+				const gender = prompt("Male | Female");
+				if(gender === "male" || gender === "female"){
+					const genderChange = gender.trim().toUpperCase();
+					infoArray.push(genderChange);
+				}else{
+					alert("Male or Female");
+					location.reload();
+				}
+				const DOB = prompt("Date Of Birth");
+				if(DOB){
+					infoArray.push(DOB);
+				}else{
+					 let fail = alert("Please put a date");
+					fail?location.reload(): alert("okay") ;
+					
+				}
+				const nationality = prompt("Your nationality");
+				if(nationality){
+					const nationalityChange = nationality.trim().toUpperCase();
+					infoArray.push(nationalityChange);
+				}else{
+					alert("We need to know where you come from!");
+	
+				}
+		    }else{
+				alert("See you next time!");
+			}
+			console.log(infoArray);
+			const one = infoArray[0];
+			const two = infoArray[1];
+			const three = infoArray[2];
+			const four = infoArray[3];
+			const five = infoArray[4];
+			const result = `Hi ${one}, here is your information`;
+			alert(result);
+			const result1 = `Name: ${one}\nAge: ${two}\nGender: ${three}\nDate of Birth: ${four}\nNationality: ${five}`
+			;
+			alert(result1);
+			const display = document.getElementById('p1');
+			display.textContent += "BYE!!";
+		}	
+			
+		document.addEventListener('DOMContentLoaded', dialogue());
+		
+
+	</script>
+</body>
+</html>
